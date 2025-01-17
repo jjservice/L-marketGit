@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <h1>LOLLIPOP MARKET</h1>
+    <details>
+      <summary style="list-style-type: none;"><i class="fas fa-shopping-cart"></i></summary>
+    <ul id="cart-items"></ul>
+    <button id="checkout-button" disabled>Proceed to Checkout</button>
+   </details>
+
+    <!-- Product List in HTML format -->
+    <h2>Available Products</h2>
+
+    <ul id="product-list">
+
+      <div class="product">
+        <h3>Apple</h3>
+        <img src="./products/applepic.jpg" alt="">
+        <p>Price: $1.99 per pound</p>
+        <input type="number" class="quantity" data-id="apple" data-price="1.99" value="1" step="0.1" min="0.1"> lbs
+        <button class="add-to-cart" data-id="apple" data-name="Apple" data-price="1.99">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Banana</h3>
+        <img src="./products/bananapic.jpg" alt="">
+        <p>Price: $2.49 per pound</p>
+        <input type="number" class="quantity" data-id="banana" data-price="2.49" value="1" step="0.1" min="0.1"> lbs
+        <button class="add-to-cart" data-id="banana" data-name="Banana" data-price="2.49">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Mango</h3>
+        <img src="./products/magopic.jpg" alt="">
+        <p>Price: $3.99 per pound</p>
+        <input type="number" class="quantity" data-id="cherry" data-price="3.99" value="1" step="0.1" min="0.1"> lbs
+        <button class="add-to-cart" data-id="cherry" data-name="Cherry" data-price="3.99">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <h3>Watermelon</h3>
+      <img src="./products/watermelonpic.jpg" alt="">
+      <p>Price: $3.99 per pound</p>
+      <input type="number" class="quantity" data-id="mango" data-price="10.99" value="1" step="0.1" min="0.1" max="2"> lbs
+      <button class="add-to-cart" data-id="Mango" data-name="cherry-mango" data-price="3.99">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h3>Strawberries</h3>
+      <img src="./products/strawberriespic.jpg" alt="">
+      <p>Price: $1.99 per pound</p>
+      <input type="number" class="quantity" data-id="Strawberries" data-price="1.99" value="1" step="0.1" min="0.1"> lbs
+      <button class="add-to-cart" data-id="Strawberries" data-name="Strawberries" data-price="1.99">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h3>Blueberries</h3>
+      <img src="./products/blueberriespic.jpg" alt="">
+      <p>Price: $2.49 per pound</p>
+      <input type="number" class="quantity" data-id="Blueberries" data-price="2.49" value="1" step="0.1" min="0.1"> lbs
+      <button class="add-to-cart" data-id="Blueberries" data-name="Blueberries" data-price="2.49">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h3>Fresh Papaya</h3>
+      <img src="./products/papayapic.webp" alt="">
+      <p>Price: $3.99 per pound</p>
+      <input type="number" class="quantity" data-id="Papaya" data-price="3.99" value="1" step="0.1" min="0.1"> lbs
+      <button class="add-to-cart" data-id="Papaya" data-name="Papaya" data-price="3.99">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <h3>Cacao - Cocoa</h3>
+    <img src="./products/cacaopic.webp" alt="">
+    <p>Price: $3.99 per pound</p>
+    <input type="number" class="quantity" data-id="Cacao - Cocoa" data-price="10.99" value="1" step="0.1" min="0.1" max="2"> lbs
+    <button class="add-to-cart" data-id="Cacao - Cocoa" data-name="Cacao - Cocoa" data-price="3.99">Add to Cart</button>
+  </div>
+
+  </ul>
+
+   
+ 
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="script.js"></script>
+</body>
+</html>
